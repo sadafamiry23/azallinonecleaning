@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Cleaning - Arizona All-In-One Cleaning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+    header.navbar {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+    header.navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 45px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+    header.navbar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+    header.navbar nav ul li a:hover,
+    header.navbar nav ul li a.active {
+      color: #b0e885;
+    }
+    header.navbar nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      padding: 10px 0;
+      border-radius: 8px;
+      min-width: 220px;
+      z-index: 999;
+    }
+    header.navbar nav ul li:hover .dropdown {
+      display: block;
+    }
+    header.navbar nav ul li .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 500;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+    header.navbar nav ul li .dropdown a:hover {
+      color: #b0e885;
+    }
+    .banner {
+      background: url('book.png') center/cover no-repeat;
+      height: 500px;
+      position: relative;
+    }
+    .form-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .form-section h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .form-section p {
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+    form {
+      display: grid;
+      gap: 20px;
+    }
+    input, textarea, select {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      padding: 14px;
+      font-size: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid #000;
+      color: black;
+      border-radius: 6px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+    button:hover {
+      background: rgba(240, 240, 240, 0.4);
+    }
+    .mirror-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid #000;
+      color: black;
+      border-radius: 6px;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: 0.3s;
+    }
+    .mirror-button:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_transparent.png" alt="Logo" style="height: 50px;" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="residential.html">Residential Cleaning</a>
+            <a href="commercial.html">Commercial Cleaning</a>
+            <a href="airbnb.html">Airbnb Cleaning</a>
+            <a href="postconstruction.html">Post-Construction</a>
+            <a href="addon.html">Add-On Services</a>
+          </div>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html" class="active">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="banner"></div>
+
+  <section class="form-section">
+    <h2>Book a Cleaning Appointment</h2>
+    <p>Schedule your professional cleaning service today. Simply fill out your details below and we’ll confirm your appointment promptly.</p>
+
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="text" name="address" placeholder="Address" required />
+      <input type="date" name="date" required />
+      <input type="time" name="time" required />
+      <textarea rows="4" name="note" placeholder="Additional Notes (Optional)"></textarea>
+
+      <label for="serviceType"><strong>Select Service Type:</strong></label>
+      <select name="serviceType" id="serviceType">
+        <option disabled selected value="">-- Select a Service --</option>
+        <option>Residential Cleaning</option>
+        <option>Commercial Cleaning</option>
+        <option>Airbnb Turnover</option>
+        <option>Move-In/Out Cleaning</option>
+        <option>Add-On Services</option>
+        <option>Post-Construction</option>
+      </select>
+
+      <div id="serviceOptions"></div>
+      <button type="submit">Submit Booking</button>
+    </form>
+  </section>
+
+  <script type="module">
+    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/+esm';
+
+    emailjs.init('_i4QeASqyVMgklNEm');
+
+    const form = document.getElementById('bookingForm');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const data = Object.fromEntries(new FormData(form));
+
+      emailjs.send('service_2e1mxqi', 'template_zg32oxa', {
+        ...data,
+        to_email: 'sadafamiry23@gmail.com'
+      });
+
+      emailjs.send('service_2e1mxqi', 'template_nc8spss', data)
+        .then(() => {
+          alert('✅ Booking submitted and confirmation sent!');
+          form.reset();
+          document.getElementById('serviceOptions').innerHTML = "";
+        })
+        .catch((err) => {
+          alert('❌ Failed to send: ' + JSON.stringify(err));
+        });
+    });
+
+    const services = {
+      "Residential Cleaning": {
+        title: "Select Home Size and Cleaning Type",
+        options: [
+          { label: "Studio / 1 Bedroom - Standard ($130)", link: "https://buy.stripe.com/8x29AU1ATeTvgdq7flf7i0c" },
+          { label: "Studio / 1 Bedroom - Deep ($150)", link: "https://buy.stripe.com/bJe9AUbbt4eR7GU8jpf7i0d" },
+          { label: "2 Bedrooms - Standard ($140)", link: "https://buy.stripe.com/cNibJ25R9aDff9m7flf7i0e" },
+          { label: "2 Bedrooms - Deep ($180)", link: "https://buy.stripe.com/7sYdRaenFeTv8KY57df7i0f" },
+          { label: "3 Bedrooms - Standard ($150)", link: "https://buy.stripe.com/dRm3cw7ZhaDfd1earxf7i0g" },
+          { label: "3 Bedrooms - Deep ($210)", link: "https://buy.stripe.com/fZubJ293l6mZ0es57df7i0h" },
+          { label: "4 Bedrooms - Standard ($180)", link: "https://buy.stripe.com/00w9AU7Zh26J4uIczFf7i0i" },
+          { label: "4 Bedrooms - Deep ($220)", link: "https://buy.stripe.com/aFabJ2bbtbHj9P2bvBf7i0j" },
+          { label: "5+ Bedrooms - Custom Quote", link: "contact.html" },
+        ]
+      },
+      "Commercial Cleaning": {
+        title: "Select Office Size and Type",
+        options: [
+          { label: "<1500 sq ft - One-Time ($150)", link: "https://buy.stripe.com/4gM14o93l3aN3qE0QXf7i0l" },
+          { label: "<1500 sq ft - Recurring ($120)", link: "https://buy.stripe.com/9B63cwa7p4eRbXaarxf7i0m" },
+          { label: "1500–3000 sq ft - One-Time ($220)", link: "https://buy.stripe.com/cNi28s7Zh9zb0es439f7i0n" },
+          { label: "1500–3000 sq ft - Recurring ($180)", link: "https://buy.stripe.com/dRmeVeenFh1DaT69ntf7i0o" },
+          { label: "3000+ sq ft - Custom Quote", link: "contact.html" },
+        ]
+      },
+      "Airbnb Turnover": {
+        title: "Select Airbnb Property Size",
+        options: [
+          { label: "Studio / 1 Bedroom ($100)", link: "https://buy.stripe.com/9B6cN64N56mZ6CQczFf7i0p" },
+          { label: "2 Bedrooms ($130)", link: "https://buy.stripe.com/7sY00kgvN4eR0es1V1f7i0q" },
+          { label: "3+ Bedrooms ($160+)", link: "https://buy.stripe.com/aFafZibbt6mZ6CQdDJf7i0r" },
+        ]
+      },
+      "Move-In/Out Cleaning": {
+        title: "Select Home Size",
+        options: [
+          { label: "Studio / 1 Bedroom ($180)", link: "https://buy.stripe.com/aFa00k7Zh9zb4uIeHNf7i0s" },
+          { label: "2 Bedrooms ($220)", link: "https://buy.stripe.com/7sY7sM5R96mZ5yM2Z5f7i0t" },
+          { label: "3 Bedrooms ($260)", link: "https://buy.stripe.com/dRm4gAenFh1D3qE57df7i0u" },
+          { label: "4+ Bedrooms - Custom Quote", link: "contact.html" },
+        ]
+      },
+      "Add-On Services": {
+        title: "Select Add-On Service",
+        options: [
+          { label: "Inside Oven ($30)", link: "https://buy.stripe.com/fZudRa93laDf0es8jpf7i0x" },
+          { label: "Inside Fridge ($30)", link: "https://buy.stripe.com/cNi00k7ZhcLnd1edDJf7i0w" },
+          { label: "Inside Cabinets ($40)", link: "https://buy.stripe.com/00weVegvN3aN8KYbvBf7i0v" },
+          { label: "All Other Add-Ons - Contact Us", link: "contact.html" },
+        ]
+      },
+      "Post-Construction": {
+        title: "Post-Construction Service",
+        options: [
+          { label: "Custom Quote", link: "contact.html" },
+        ]
+      }
+    };
+
+    const serviceTypeDropdown = document.getElementById("serviceType");
+    const serviceOptionsDiv = document.getElementById("serviceOptions");
+
+    serviceTypeDropdown.addEventListener("change", () => {
+      const selected = serviceTypeDropdown.value;
+      serviceOptionsDiv.innerHTML = "";
+
+      if (!services[selected]) return;
+
+      const title = document.createElement("h4");
+      title.textContent = services[selected].title;
+      serviceOptionsDiv.appendChild(title);
+
+      services[selected].options.forEach(opt => {
+        const btn = document.createElement("a");
+        btn.href = opt.link;
+        btn.textContent = opt.label;
+        btn.className = "mirror-button";
+        btn.target = "_blank";
+        serviceOptionsDiv.appendChild(btn);
+      });
+    });
+  </script>
+</body>
+</html>
+<footer style="position: relative; color: white; overflow: hidden; font-family: 'Inter', sans-serif;">
+  <!-- Background Image with Dark Overlay -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34, 34, 34, 0.75), rgba(34, 34, 34, 0.75)), url('footer.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  "></div>
+
+  <!-- Footer Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+  ">
+
+    <!-- Branding (Fully Centered Logo + Text) -->
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+  <div style="margin-bottom: 12px;">
+    <img src="logo_transparent.png" alt="Logo" style="height: 50px;">
+  </div>
+  <p style="line-height: 1.6; font-size: 0.95rem; max-width: 260px;">
+    Arizona All‑In‑One Cleaning provides eco‑conscious, reliable, and detail-oriented cleaning for homes and businesses across Arizona.
+  </p>
+</div>
+
+    <!-- Explore -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Explore</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+        <li><a href="careers.html" style="color: #fff; text-decoration: none;">Join Our Team</a></li>
+        <li><a href="faq.html" style="color: #fff; text-decoration: none;">FAQ</a></li>
+        <li><a href="testimonials.html" style="color: #fff; text-decoration: none;">Testimonials</a></li>
+        <li><a href="blog.html" style="color: #fff; text-decoration: none;">Blog</a></li>
+        <li><a href="coupons.html" style="color: #fff; text-decoration: none;">Special Offers</a></li>
+        <li><a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Contact Us</h3>
+      <p style="margin: 8px 0;">📞 +1 (480) 440‑6908</p>
+      <p style="margin: 8px 0;">✉ info@yourdomain.com</p>
+      <div style="margin-top: 12px;">
+        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="height: 24px;">
+        </a>
+        <a href="https://www.instagram.com/az_cleaning_service/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height: 24px;">
+        </a>
+        <a href="https://www.tiktok.com/@az.cleaning.servi1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670150.png" alt="TikTok" style="height: 24px;">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="border-top: 1px solid rgba(255,255,255,0.2); text-align: center; padding: 20px 0; font-size: 0.85rem; z-index: 2; position: relative;">
+    © 2025 Arizona All‑In‑One Cleaning Services. All rights reserved.
+  </div>
+</footer>

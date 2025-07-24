@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials - Arizona All-In-One Cleaning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+    .navbar {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .logo img { height: 50px; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 45px;
+    }
+    nav ul li { position: relative; }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul li a:hover,
+    nav ul li a.active { color: #b0e885; }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px 0;
+      list-style: none;
+      min-width: 220px;
+      backdrop-filter: blur(12px);
+      border-radius: 8px;
+    }
+    nav ul li:hover ul { display: block; }
+    nav ul li ul li { padding: 8px 20px; }
+    nav ul li ul li a {
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    .banner {
+      background: url('Testimonials.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .banner h1 {
+      color: white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+
+    .testimonials-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .testimonials-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+    .testimonials-section p {
+      font-size: 1.1rem;
+      color: #444;
+      max-width: 800px;
+      margin: 0 auto 40px;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .testimonial-card {
+      border: 1px solid #e0e0e0;
+      padding: 25px;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+    .testimonial-card h4 {
+      font-size: 1.1rem;
+      color: #1d4e32;
+      margin-top: 12px;
+    }
+    .testimonial-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .stars {
+      color: #ffc107;
+      margin-bottom: 8px;
+    }
+    .toggle-btn {
+      margin-top: 40px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border: 1px solid #1d4e32;
+      background: #fff;
+      color: #1d4e32;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .toggle-btn:hover {
+      background: #f0f0f0;
+    }
+    #more-reviews { display: none; margin-top: 40px; }
+  </style>
+  <script>
+    function toggleReviews() {
+      const more = document.getElementById('more-reviews');
+      const button = document.getElementById('toggle-btn');
+      if (more.style.display === 'grid') {
+        more.style.display = 'none';
+        button.innerText = 'Show More Customer Reviews';
+      } else {
+        more.style.display = 'grid';
+        button.innerText = 'Show Less Customer Reviews';
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_transparent.png" alt="Arizona All-In-One Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul>
+            <li><a href="residential.html">Residential Cleaning</a></li>
+            <li><a href="commercial.html">Commercial Cleaning</a></li>
+            <li><a href="airbnb.html">Airbnb Cleaning</a></li>
+            <li><a href="post-construction.html">Post-Construction</a></li>
+            <li><a href="addon.html">Add-On Services</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>What Our Customers Are Saying</h1>
+  </section>
+
+  <section class="testimonials-section">
+    <h2>Feedbacks from Our Clients</h2>
+    <p>At Arizona All-In-One Cleaning, we take pride in delivering exceptional service to every home, business, and vacation rental we touch. Don’t take our word for it — here’s what real clients are saying about their experience with our team.</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“Arizona All-In-One Cleaning made our home feel brand new. The attention to detail was incredible!”</p>
+        <h4>– Emily R., Phoenix</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“The best cleaning crew I’ve worked with for our Airbnb units. Always punctual and spotless results.”</p>
+        <h4>– Jacob H., Mesa</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“Professional, friendly, and fast. Highly recommend for anyone needing deep cleaning after renovations.”</p>
+        <h4>– Sarah K., Scottsdale</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“The team took such great care of our office space. Reliable and respectful every time.”</p>
+        <h4>– Anthony D., Tempe</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“Their eco-friendly products were perfect for our kids and pets. The house feels fresh every time.”</p>
+        <h4>– Lisa M., Chandler</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“Our commercial cleaning contract has been flawless. Highly responsive and professional team.”</p>
+        <h4>– David B., Glendale</h4>
+      </div>
+    </div>
+
+    <button class="toggle-btn" onclick="document.getElementById('more-reviews').style.display='grid'; this.style.display='none';">Show More Customer Reviews</button>
+
+    <div id="more-reviews" class="testimonial-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“We were overwhelmed trying to move out and clean at the same time. Arizona All-In-One showed up on time and left the place spotless. We got our full deposit back!”</p>
+        <h4>– Tanya R., Gilbert</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“We’ve had a recurring weekly cleaning for over a year now. Same team, consistent results, and always super respectful.”</p>
+        <h4>– Mark S., Chandler</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“As an Airbnb host, fast turnover is everything. Their team is a dream — quick, detailed, and reliable. My reviews went up!”</p>
+        <h4>– Danielle L., Phoenix</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“They didn’t miss a single corner! The kitchen appliances and bathroom tiles looked like new. Will definitely book again.”</p>
+        <h4>– James A., Peoria</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“There was dust everywhere after our remodel. Arizona All-In-One handled it in one visit. Impressed beyond words.”</p>
+        <h4>– Rachel F., Ahwatukee</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>“They clean our fitness studio 3x per week. Always spotless and ready for members the next morning. Great communication too.”</p>
+        <h4>– Kelsey N., Scottsdale</h4>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+<footer style="position: relative; color: white; overflow: hidden; font-family: 'Inter', sans-serif;">
+  <!-- Background Image with Dark Overlay -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34, 34, 34, 0.75), rgba(34, 34, 34, 0.75)), url('footer.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  "></div>
+
+  <!-- Footer Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+  ">
+
+    <!-- Branding (Fully Centered Logo + Text) -->
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+  <div style="margin-bottom: 12px;">
+    <img src="logo_transparent.png" alt="Logo" style="height: 50px;">
+  </div>
+  <p style="line-height: 1.6; font-size: 0.95rem; max-width: 260px;">
+    Arizona All‑In‑One Cleaning provides eco‑conscious, reliable, and detail-oriented cleaning for homes and businesses across Arizona.
+  </p>
+</div>
+
+    <!-- Explore -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Explore</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+        <li><a href="careers.html" style="color: #fff; text-decoration: none;">Join Our Team</a></li>
+        <li><a href="faq.html" style="color: #fff; text-decoration: none;">FAQ</a></li>
+        <li><a href="testimonials.html" style="color: #fff; text-decoration: none;">Testimonials</a></li>
+        <li><a href="blog.html" style="color: #fff; text-decoration: none;">Blog</a></li>
+        <li><a href="coupons.html" style="color: #fff; text-decoration: none;">Special Offers</a></li>
+        <li><a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Contact Us</h3>
+      <p style="margin: 8px 0;">📞 +1 (480) 440‑6908</p>
+      <p style="margin: 8px 0;">✉ info@yourdomain.com</p>
+      <div style="margin-top: 12px;">
+        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="height: 24px;">
+        </a>
+        <a href="https://www.instagram.com/az_cleaning_service/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height: 24px;">
+        </a>
+        <a href="https://www.tiktok.com/@az.cleaning.servi1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670150.png" alt="TikTok" style="height: 24px;">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="border-top: 1px solid rgba(255,255,255,0.2); text-align: center; padding: 20px 0; font-size: 0.85rem; z-index: 2; position: relative;">
+    © 2025 Arizona All‑In‑One Cleaning Services. All rights reserved.
+  </div>
+</footer>
