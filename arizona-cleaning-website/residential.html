@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residential Cleaning | Arizona All-In-One</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background-color: #fff;
+    }
+
+    header.navbar {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-sizing: border-box;
+    }
+
+    header.navbar .logo img {
+      height: 50px;
+    }
+
+    header.navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    header.navbar nav ul li {
+      position: relative;
+    }
+
+    header.navbar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: 0.3s ease;
+    }
+
+    header.navbar nav ul li a:hover,
+    header.navbar nav ul li a.active {
+      color: #b0e885;
+    }
+
+    /* Dropdown */
+    header.navbar nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      padding: 10px 0;
+      border-radius: 8px;
+      min-width: 220px;
+      z-index: 999;
+    }
+
+    header.navbar nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    header.navbar nav ul li .dropdown a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      font-weight: 500;
+      font-size: 0.95rem;
+      white-space: nowrap;
+    }
+
+    header.navbar nav ul li .dropdown a:hover {
+      color: #b0e885;
+    }
+
+    .banner {
+      background: url('az homes.jpg') center/cover no-repeat;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.8rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      text-align: center;
+      padding-top: 60px;
+    }
+
+    .banner .glass-btn {
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background 0.3s ease;
+    }
+
+    .banner .glass-btn:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .content-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .content-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .service-columns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .service-box {
+      flex: 1 1 450px;
+    }
+
+    .service-box h3 {
+      font-size: 1.5rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .service-box ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    .service-box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .book-section {
+      margin-top: 30px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .book-section button {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: #000;
+      padding: 12px 30px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      transition: background 0.3s ease;
+    }
+
+    .book-section button:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_transparent.png" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <div class="dropdown">
+            <a href="residential.html">Residential Cleaning</a>
+            <a href="commercial.html">Commercial Cleaning</a>
+            <a href="airbnb.html">Airbnb Cleaning</a>
+            <a href="construction.html">Post-Construction</a>
+            <a href="add-on.html">Add-On Services</a>
+          </div>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="banner">
+    Residential Cleaning
+    <button class="glass-btn" onclick="window.location.href='booking.html'">Book a Cleaning Today</button>
+  </div>
+
+  <section class="content-section">
+    <h2>What is Residential Cleaning?</h2>
+    <p>
+      Our Residential Cleaning Services are designed to deliver a clean, healthy, and stress-free living environment. Whether you need a one-time deep clean or a recurring schedule, we tailor each session to your lifestyle. Our team ensures every kitchen, bathroom, and living space gets the care it deserves.
+    </p>
+
+    <div class="service-columns">
+      <div class="service-box">
+        <img src="Residential Cleaning.jpg" alt="Residential Cleaning">
+        <h3>Residential / One-Time Cleaning</h3>
+        <ul>
+          <li>Detailed dusting and surface wipe-down</li>
+          <li>Vacuum and mop floors in all rooms</li>
+          <li>Disinfect high-touch areas</li>
+          <li>Trash removal and deodorizing</li>
+        </ul>
+        <h3>Kitchen Cleaning</h3>
+        <ul>
+          <li>Wipe and disinfect counters, appliances, and sinks</li>
+          <li>Clean cabinet faces and backsplash</li>
+          <li>Degrease stove tops and clean microwave interior</li>
+          <li>Take out trash and mop floors</li>
+        </ul>
+        <h3>Bathroom Cleaning</h3>
+        <ul>
+          <li>Scrub sinks, tubs, showers, and toilets</li>
+          <li>Sanitize fixtures and countertops</li>
+          <li>Shine mirrors and chrome</li>
+          <li>Empty trash and deodorize</li>
+        </ul>
+        <h3>Interior & Common Area Cleaning</h3>
+        <ul>
+          <li>Dust furniture, décor, and fixtures</li>
+          <li>Vacuum rugs and carpet</li>
+          <li>Clean windows (interior), doors, and mirrors</li>
+          <li>Organize and straighten shared spaces</li>
+        </ul>
+        <h3>Whole House Touch-Up</h3>
+        <ul>
+          <li>Quick clean of key surfaces and areas</li>
+          <li>Ideal between scheduled visits or before guests arrive</li>
+          <li>Fluff pillows, straighten furniture, and wipe smudges</li>
+        </ul>
+        <div class="book-section">
+          <button onclick="window.location.href='booking.html'">Get a Free Quote</button>
+        </div>
+      </div>
+
+      <div class="service-box">
+        <img src="Initial Deep Clean.jpeg" alt="Deep Cleaning">
+        <h3>Deep Cleaning</h3>
+        <ul>
+          <li>Top-to-bottom refresh of the entire home</li>
+          <li>Baseboards, vents, fans, blinds, and hard-to-reach spots</li>
+          <li>Inside of cabinets, drawers, and appliances</li>
+          <li>Recommended for first-time or seasonal clients</li>
+        </ul>
+        <div class="book-section">
+          <button onclick="window.location.href='booking.html'">Get a Free Quote</button>
+        </div>
+
+        <img src="Move In : Move Out Cleaning.jpeg" alt="Move In Move Out">
+        <h3>Move-In / Move-Out Cleaning</h3>
+        <ul>
+          <li>Empty home cleaning for moving day transitions</li>
+          <li>Wall scrubbing, floor polishing, and disinfecting</li>
+          <li>Inside cabinets, drawers, closets, and appliances</li>
+          <li>Ensures readiness for lease or new tenants</li>
+        </ul>
+        <div class="book-section">
+          <button onclick="window.location.href='booking.html'">Get a Free Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    
+<footer style="position: relative; color: white; overflow: hidden; font-family: 'Inter', sans-serif;">
+  <!-- Background Image with Dark Overlay -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34, 34, 34, 0.75), rgba(34, 34, 34, 0.75)), url('footer.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  "></div>
+
+  <!-- Footer Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+  ">
+
+    <!-- Branding (Fully Centered Logo + Text) -->
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+  <div style="margin-bottom: 12px;">
+    <img src="logo_transparent.png" alt="Logo" style="height: 50px;">
+  </div>
+  <p style="line-height: 1.6; font-size: 0.95rem; max-width: 260px;">
+    Arizona All‑In‑One Cleaning provides eco‑conscious, reliable, and detail-oriented cleaning for homes and businesses across Arizona.
+  </p>
+</div>
+
+    <!-- Explore -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Explore</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+        <li><a href="careers.html" style="color: #fff; text-decoration: none;">Join Our Team</a></li>
+        <li><a href="faq.html" style="color: #fff; text-decoration: none;">FAQ</a></li>
+        <li><a href="testimonials.html" style="color: #fff; text-decoration: none;">Testimonials</a></li>
+        <li><a href="blog.html" style="color: #fff; text-decoration: none;">Blog</a></li>
+        <li><a href="coupons.html" style="color: #fff; text-decoration: none;">Special Offers</a></li>
+        <li><a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Contact Us</h3>
+      <p style="margin: 8px 0;">📞 +1 (480) 440‑6908</p>
+      <p style="margin: 8px 0;">✉ info@yourdomain.com</p>
+      <div style="margin-top: 12px;">
+        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="height: 24px;">
+        </a>
+        <a href="https://www.instagram.com/az_cleaning_service/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height: 24px;">
+        </a>
+        <a href="https://www.tiktok.com/@az.cleaning.servi1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670150.png" alt="TikTok" style="height: 24px;">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="border-top: 1px solid rgba(255,255,255,0.2); text-align: center; padding: 20px 0; font-size: 0.85rem; z-index: 2; position: relative;">
+    © 2025 Arizona All‑In‑One Cleaning Services. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
+
+  <!-- All your banner, content, services, and footer stay the same -->

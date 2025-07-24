@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arizona All-In-One Cleaning Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      background: #ffffff;
+    }
+
+    h1, h2 {
+      color: black;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .navbar {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .navbar nav ul {
+      list-style: none;
+      display: flex;
+      gap: 45px;
+    }
+
+    .navbar nav ul li {
+      position: relative;
+    }
+
+    .navbar nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav ul li a:hover {
+      color: #b0e885;
+    }
+
+    .navbar nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px 0;
+      list-style: none;
+      min-width: 220px;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 8px;
+    }
+
+    .navbar nav ul li:hover ul {
+      display: block;
+    }
+
+    .navbar nav ul li ul li {
+      padding: 8px 20px;
+    }
+
+    .navbar nav ul li ul li a {
+      color: white;
+      font-size: 0.95rem;
+      display: block;
+    }
+
+    .navbar nav ul li ul li a:hover {
+      color: #b0e885;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('Screenshot_2025-07-14_at_6.02.15_PM.png') no-repeat center center / cover;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      text-align: center;
+      padding-bottom: 120px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      color: white;
+      z-index: 2;
+      max-width: 700px;
+      padding: 0 20px;
+    }
+
+    .hero-content h1 {
+      font-size: 2rem;
+      color: white;
+    }
+
+    .hero-content p {
+      font-size: 1.3rem;
+      margin-top: 15px;
+    }
+
+    .mirror-button {
+      padding: 12px 25px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 30px;
+    }
+
+    .mirror-button:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1100px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+    }
+
+    .features, .services-preview {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .feature-box, .service-box {
+      flex: 1 1 250px;
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .feature-box h3, .service-box h3 {
+      color: #1d4e32;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .service-box a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+    }
+
+    .service-box a:hover {
+      background-color: rgba(0, 0, 0, 0.35);
+      transform: scale(1.05);
+    }
+
+    .testimonial {
+      font-style: italic;
+      max-width: 800px;
+      margin: 30px auto;
+      color: #444;
+      font-size: 1.1rem;
+    }
+
+    .cta-buttons {
+      margin-top: 40px;
+    }
+
+    .cta-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 14px 28px;
+      border: 1px solid #000;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+      transition: background 0.3s ease;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+
+    .cta-buttons a:hover {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+<!-- Full HTML body continues unchanged... -->
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_transparent.png" alt="Arizona All-In-One Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul>
+            <li><a href="residential.html">Residential Cleaning</a></li>
+            <li><a href="commercial.html">Commercial Cleaning</a></li>
+            <li><a href="airbnb.html">Airbnb Cleaning</a></li>
+            <li><a href="postconstruction.html">Post-Construction</a></li>
+            <li><a href="add-on.html">Add-On Services</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Reliable & Affordable Cleaning Services Across Arizona</h1>
+      <p>Trusted professionals for homes, offices, Airbnbs, and construction sites.</p>
+      <a href="booking.html" class="mirror-button">Book a Cleaning Today</a>
+    </div>
+  </section>
+
+  <!-- New Intro Section -->
+  <section class="section">
+    <h2>Clean Spaces. Happy Places.</h2>
+    <p>From first-time visitors to returning clients, we believe in earning your trust with every scrub and shine. Arizona All-In-One Cleaning offers premium cleaning experiences that leave your space spotless, sanitized, and refreshed.</p>
+  </section>
+
+  <section class="section">
+    <h2>Why Choose Arizona All-In-One Cleaning?</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Fast & Flexible Scheduling</h3>
+        <p>We work around your calendar and deliver on-time service every time.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Eco-Friendly Products</h3>
+        <p>Safe for your family, pets, and the environment — no harsh chemicals.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Fully Insured & Trained</h3>
+        <p>Our team is licensed, insured, and trained to handle any cleaning job.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Detailed Checklists</h3>
+        <p>Every service includes a tailored checklist so no corner is ever missed.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Local Arizona Experts</h3>
+        <p>We proudly serve our community with integrity and care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our Services</h2>
+    <div class="services-preview">
+      <div class="service-box">
+        <h3>🏠 Residential Cleaning</h3>
+        <p>Sparkling homes, tidy spaces, and refreshed rooms.</p>
+        <a href="residential.html">Learn More</a>
+      </div>
+      <div class="service-box">
+        <h3>🏢 Commercial Cleaning</h3>
+        <p>Offices and businesses that shine and impress.</p>
+        <a href="commercial.html">Learn More</a>
+      </div>
+      <div class="service-box">
+        <h3>🛏 Airbnb Turnovers</h3>
+        <p>Fast, reliable, guest-ready cleaning after every stay.</p>
+        <a href="airbnb.html">Learn More</a>
+      </div>
+      <div class="service-box">
+        <h3>🏗 Post-Construction Cleaning</h3>
+        <p>Dust-free, debris-free final cleans after remodeling or builds.</p>
+        <a href="postconstruction.html">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>What Our Customers Are Saying</h2>
+    <p class="testimonial">“Arizona All-In-One Cleaning is the best cleaning team I’ve hired. They were fast, polite, and left our office spotless. I recommend them to anyone looking for quality service.” – Emily R.</p>
+    <p class="testimonial">“Impressed by their professionalism and eye for detail. Our Airbnb guests constantly leave five-star reviews thanks to their service!” – Jacob H.</p>
+    <p class="testimonial">“My home has never looked better. I love that they use eco-friendly products!” – Sarah K.</p>
+    <p class="testimonial">“After our renovation, the team came in and made it look brand new. Can’t recommend enough.” – Anthony D.</p>
+  </section>
+  <!-- New: How It Works Section -->
+  <section style="
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('image.png') no-repeat center center / cover;
+    padding: 80px 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    text-align: left;
+  ">
+    <div style="max-width: 1000px; margin: auto;">
+      <h2 style="font-size: 2.2rem; margin-bottom: 30px; color: white;">How It Works</h2>
+      <ul style="list-style: none; padding: 0; font-size: 1.05rem; line-height: 2;">
+        <li>✅ A supervisor/team leader is onsite for every service</li>
+        <li>✅ The supervisor/team leader is assigned to your home</li>
+        <li>✅ We arrive in a logo-branded company vehicle</li>
+        <li>✅ The maids are trained and wear uniforms</li>
+        <li>✅ We bring all the cleaning supplies</li>
+        <li>✅ We work in teams for efficiency</li>
+        <li>✅ The estimate is free, with no obligation</li>
+        <li>✅ No contracts so the pressure is on us</li>
+        <li>✅ Your service is locally owned and operated</li>
+        <li>✅ The maids must pass background checks</li>
+        <li>✅ We are licensed, bonded, and insured</li>
+        <li>✅ We will happily customize your cleaning</li>
+        <li>✅ 100% Satisfaction Guarantee every time</li>
+      </ul>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Let’s Get Your Place Sparkling!</h2>
+    <div class="cta-buttons">
+      <a href="contact.html">📞 Contact Us</a>
+      <a href="booking.html">✨ Get a Free Quote</a>
+    </div>
+  </section>
+</body>
+</html>
+<footer style="position: relative; color: white; overflow: hidden; font-family: 'Inter', sans-serif;">
+  <!-- Background Image with Dark Overlay -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34, 34, 34, 0.75), rgba(34, 34, 34, 0.75)), url('footer.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  "></div>
+
+  <!-- Footer Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+  ">
+
+    <!-- Branding (Fully Centered Logo + Text) -->
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+  <div style="margin-bottom: 12px;">
+    <img src="logo_transparent.png" alt="Logo" style="height: 50px;">
+  </div>
+  <p style="line-height: 1.6; font-size: 0.95rem; max-width: 260px;">
+    Arizona All‑In‑One Cleaning provides eco‑conscious, reliable, and detail-oriented cleaning for homes and businesses across Arizona.
+  </p>
+</div>
+
+    <!-- Explore -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Explore</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+        <li><a href="careers.html" style="color: #fff; text-decoration: none;">Join Our Team</a></li>
+        <li><a href="faq.html" style="color: #fff; text-decoration: none;">FAQ</a></li>
+        <li><a href="testimonials.html" style="color: #fff; text-decoration: none;">Testimonials</a></li>
+        <li><a href="blog.html" style="color: #fff; text-decoration: none;">Blog</a></li>
+        <li><a href="coupons.html" style="color: #fff; text-decoration: none;">Special Offers</a></li>
+        <li><a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Contact Us</h3>
+      <p style="margin: 8px 0;">📞 +1 (480) 440‑6908</p>
+      <p style="margin: 8px 0;">✉ info@yourdomain.com</p>
+      <div style="margin-top: 12px;">
+        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="height: 24px;">
+        </a>
+        <a href="https://www.instagram.com/az_cleaning_service/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height: 24px;">
+        </a>
+        <a href="https://www.tiktok.com/@az.cleaning.servi1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670150.png" alt="TikTok" style="height: 24px;">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="border-top: 1px solid rgba(255,255,255,0.2); text-align: center; padding: 20px 0; font-size: 0.85rem; z-index: 2; position: relative;">
+    © 2025 Arizona All‑In‑One Cleaning Services. All rights reserved.
+  </div>
+</footer>

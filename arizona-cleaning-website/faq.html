@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - Arizona All-In-One Cleaning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fff;
+      color: #000;
+      overflow-x: hidden;
+    }
+    .navbar {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      padding: 15px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+    }
+    .logo img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 45px;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #b0e885;
+    }
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 10px 0;
+      list-style: none;
+      min-width: 220px;
+      backdrop-filter: blur(12px);
+      border-radius: 8px;
+    }
+    nav ul li:hover ul {
+      display: block;
+    }
+    nav ul li ul li {
+      padding: 8px 20px;
+    }
+    nav ul li ul li a {
+      color: white;
+      font-size: 0.95rem;
+    }
+    .banner {
+      background: url('FAQ.jpg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner h1 {
+      color: white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    .faq-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .faq-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+    }
+    .faq {
+      margin-bottom: 25px;
+    }
+    .faq h3 {
+      font-size: 1.2rem;
+      color: #1d4e32;
+      cursor: pointer;
+    }
+    .faq p {
+      font-size: 1rem;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="logo_transparent.png" alt="Arizona All-In-One Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="services.html">Services</a>
+          <ul>
+            <li><a href="residential.html">Residential Cleaning</a></li>
+            <li><a href="commercial.html">Commercial Cleaning</a></li>
+            <li><a href="airbnb.html">Airbnb Cleaning</a></li>
+            <li><a href="post-construction.html">Post-Construction</a></li>
+            <li><a href="addon.html">Add-On Services</a></li>
+          </ul>
+        </li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="booking.html">Booking</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="active" href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h1>Frequently Asked Questions</h1>
+  </section>
+
+  <section class="faq-section">
+    <h2>Your Questions, Answered</h2>
+
+    <div class="faq">
+      <h3>1. What areas do you serve?</h3>
+      <p>We proudly serve clients throughout Arizona, including Phoenix, Tucson, Mesa, and nearby communities.</p>
+    </div>
+    <div class="faq">
+      <h3>2. What types of cleaning services do you offer?</h3>
+      <p>We offer Residential, Commercial, Airbnb, Post-Construction, and Add-On cleaning services.</p>
+    </div>
+    <div class="faq">
+      <h3>3. Are your cleaners background-checked and insured?</h3>
+      <p>Yes, all team members are background-checked, trained, and insured.</p>
+    </div>
+    <div class="faq">
+      <h3>4. Do I need to be home during the cleaning?</h3>
+      <p>No, we can clean with prior access instructions. Security and privacy are always respected.</p>
+    </div>
+    <div class="faq">
+      <h3>5. Do you bring your own cleaning supplies?</h3>
+      <p>Yes, we bring eco-friendly supplies and top-grade equipment to every job.</p>
+    </div>
+    <div class="faq">
+      <h3>6. Are your products safe for kids and pets?</h3>
+      <p>Absolutely! We use non-toxic, pet- and child-safe products.</p>
+    </div>
+    <div class="faq">
+      <h3>7. How do I book a cleaning?</h3>
+      <p>Use our booking page, call us, or fill out our contact form.</p>
+    </div>
+    <div class="faq">
+      <h3>8. Do you offer same-day or emergency cleanings?</h3>
+      <p>Yes — subject to availability. Check our Add-On Services section.</p>
+    </div>
+    <div class="faq">
+      <h3>9. What’s included in a standard home cleaning?</h3>
+      <p>Dusting, sweeping, mopping, surface cleaning, bathrooms, kitchen, and trash removal.</p>
+    </div>
+    <div class="faq">
+      <h3>10. What’s the difference between standard and deep cleaning?</h3>
+      <p>Deep cleaning includes extra detail like inside appliances, baseboards, and behind furniture.</p>
+    </div>
+    <div class="faq">
+      <h3>11. Do you offer recurring service discounts?</h3>
+      <p>Yes! We offer savings on weekly, bi-weekly, and monthly cleanings.</p>
+    </div>
+    <div class="faq">
+      <h3>12. How do you handle Airbnb turnovers?</h3>
+      <p>Quick, guest-ready cleanings, restocking, and optional photo documentation.</p>
+    </div>
+    <div class="faq">
+      <h3>13. Can I customize my cleaning plan?</h3>
+      <p>Absolutely. We tailor each visit to your needs and preferences.</p>
+    </div>
+    <div class="faq">
+      <h3>14. What if I’m not satisfied with the service?</h3>
+      <p>We offer a 100% Satisfaction Guarantee. We'll come back and make it right.</p>
+    </div>
+    <div class="faq">
+      <h3>15. Do you offer commercial cleaning contracts?</h3>
+      <p>Yes. We provide flexible daily, weekly, or monthly options for businesses.</p>
+    </div>
+    <div class="faq">
+      <h3>16. What safety protocols do you follow?</h3>
+      <p>We wear uniforms, sanitize tools, and follow strict hygiene standards.</p>
+    </div>
+    <div class="faq">
+      <h3>17. How long will my cleaning take?</h3>
+      <p>Depends on the size and condition of your space — we’ll provide an estimate in advance.</p>
+    </div>
+    <div class="faq">
+      <h3>18. What payment methods do you accept?</h3>
+      <p>Apple Pay, Google Pay, credit/debit cards, Stripe, and custom invoices.</p>
+    </div>
+    <div class="faq">
+      <h3>19. What is your cancellation policy?</h3>
+      <p>Please give us 24 hours' notice. Late cancellations may incur a small fee.</p>
+    </div>
+    <div class="faq">
+      <h3>20. How can I reach your team?</h3>
+      <p>Call +1 (480) 440‑6908 or email info@yourdomain.com. You can also contact us through the website.</p>
+    </div>
+  </section>
+</body>
+</html>
+<footer style="position: relative; color: white; overflow: hidden; font-family: 'Inter', sans-serif;">
+  <!-- Background Image with Dark Overlay -->
+  <div style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(34, 34, 34, 0.75), rgba(34, 34, 34, 0.75)), url('footer.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: 1;
+  "></div>
+
+  <!-- Footer Content -->
+  <div style="
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
+  ">
+
+    <!-- Branding (Fully Centered Logo + Text) -->
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+  <div style="margin-bottom: 12px;">
+    <img src="logo_transparent.png" alt="Logo" style="height: 50px;">
+  </div>
+  <p style="line-height: 1.6; font-size: 0.95rem; max-width: 260px;">
+    Arizona All‑In‑One Cleaning provides eco‑conscious, reliable, and detail-oriented cleaning for homes and businesses across Arizona.
+  </p>
+</div>
+
+    <!-- Explore -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Explore</h3>
+      <ul style="list-style: none; padding: 0; margin: 0; line-height: 1.9;">
+        <li><a href="careers.html" style="color: #fff; text-decoration: none;">Join Our Team</a></li>
+        <li><a href="faq.html" style="color: #fff; text-decoration: none;">FAQ</a></li>
+        <li><a href="testimonials.html" style="color: #fff; text-decoration: none;">Testimonials</a></li>
+        <li><a href="blog.html" style="color: #fff; text-decoration: none;">Blog</a></li>
+        <li><a href="coupons.html" style="color: #fff; text-decoration: none;">Special Offers</a></li>
+        <li><a href="privacy.html" style="color: #fff; text-decoration: none;">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 200px; text-align: center;">
+      <h3 style="margin-bottom: 10px; font-size: 1.1rem;">Contact Us</h3>
+      <p style="margin: 8px 0;">📞 +1 (480) 440‑6908</p>
+      <p style="margin: 8px 0;">✉ info@yourdomain.com</p>
+      <div style="margin-top: 12px;">
+        <a href="https://www.facebook.com/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="height: 24px;">
+        </a>
+        <a href="https://www.instagram.com/az_cleaning_service/" target="_blank" style="margin-right: 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="height: 24px;">
+        </a>
+        <a href="https://www.tiktok.com/@az.cleaning.servi1" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670150.png" alt="TikTok" style="height: 24px;">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div style="border-top: 1px solid rgba(255,255,255,0.2); text-align: center; padding: 20px 0; font-size: 0.85rem; z-index: 2; position: relative;">
+    © 2025 Arizona All‑In‑One Cleaning Services. All rights reserved.
+  </div>
+</footer>
